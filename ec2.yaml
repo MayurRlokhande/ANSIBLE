@@ -14,11 +14,6 @@
       debug:
         msg: "Using Python {{ ansible_python_version }}"
               
-    - name: Install dependencies
-      shell: "/usr/bin/python3.10 -m pip install {{ item }}"
-      loop:
-       - boto3
-       - botocore
 
   vars:
     ansible_python_interpreter: /usr/bin/python3.10
